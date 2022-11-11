@@ -1,4 +1,4 @@
-package com.amazon.example.steps;
+package com.amazon.example.stepDefinitions;
 
 import org.jbehave.core.annotations.*;
 import org.jbehave.core.steps.Steps;

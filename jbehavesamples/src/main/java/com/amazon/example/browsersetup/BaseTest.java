@@ -15,7 +15,7 @@ public WebDriver driver;
 public Properties props;
 public BaseTest() throws IOException {
     props = new Properties();
-    FileInputStream ip = new FileInputStream("/home/premst/IdeaProjects/BDD/src/test/resources/config/config.properties");
+    FileInputStream ip = new FileInputStream("/home/premst/Desktop/jbehavesample/jbehavesamples/src/main/java/com/amazon/example/stories/config.properties");
     props.load(ip);
 }
 public WebDriver  intialization(){

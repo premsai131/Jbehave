@@ -1,13 +1,14 @@
 package com.amazon.example.pages;
 
-import com.amazon.example.browsersetup.BaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import java.io.File;
 import java.io.IOException;
 
-public class LoginPage extends BaseTest {
+public class LoginPage  {
    public WebDriver driver;
+    private File file;
     private By amazonLogo = By.cssSelector("[aria-label=\"Amazon\"]");
     private By signInText = By.xpath("//h1[contains(text(),'Sign in')]");
     private By emailInputField = By.cssSelector("[id='ap_email']");
@@ -15,7 +16,6 @@ public class LoginPage extends BaseTest {
     private By invlaidAccountErrorMessageText = By.cssSelector("ul>li>span");
     private By passwordinputField = By.cssSelector("[id='ap_password']");
     private By signinButton = By.cssSelector("[id=\"signInSubmit\"]");
-
 
     public LoginPage(WebDriver driver) throws IOException {
        this.driver = driver;

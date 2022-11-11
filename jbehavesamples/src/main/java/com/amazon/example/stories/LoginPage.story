@@ -15,7 +15,7 @@ Examples:
 Scenario: Verify login to amazon with invalid passwords
 
 Given user is on amazon login page
-When user enters username as premsai23@gmail.com
+When user enters username as premsai@gmail.com
 Then user clicks on continue button
 And user enters password as <password>
 Then user should see error message after clicking on signin button
@@ -26,14 +26,13 @@ Examples:
 |asdkhas83972324|
 
 
-!-- Scenario: Verify login to amazon with valid credentials
-!--
-!-- Given user is on amazon login page
-!-- When user enters username of premsaiinfotech@gmail.com
-!-- Then user clicks on continue button
-!-- Then user enters password as password and clicks on signin button
-!-- And user should be successfully signedin and sees home page
-!-- Then user should see user's name in accounts&lists section
+Scenario: Verify login to amazon with valid credentials
+
+Given user is on amazon login page
+When user enters username as 9100249549
+Then user clicks on continue button
+And user enters password and clicks on signin button
+Then user should see user's name in accounts&lists section
 
 
 
