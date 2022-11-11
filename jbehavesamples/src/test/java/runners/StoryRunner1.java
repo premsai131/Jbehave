@@ -20,7 +20,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 //@RunWith(SpringJUnit4ClassRunner.class)
-public class StoryRunnerTest extends ConfigurableEmbedder{
+public class StoryRunner1 extends ConfigurableEmbedder{
     public Embedder embedder;
    static String[] stories={
      "homepage.story",

@@ -104,7 +104,7 @@
         <version>3.0.0-M5</version>
           <configuration>
             <includes>
-              <include>StoryRunnerTest.java</include>
+              <include>runners.StoryRunner1</include>
             </includes>
           </configuration>
         </plugin>

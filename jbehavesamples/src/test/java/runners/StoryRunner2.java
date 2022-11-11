@@ -24,7 +24,7 @@ import org.jbehave.core.io.StoryFinder;
 import static java.util.Arrays.asList;
 import static org.jbehave.core.io.CodeLocations.codeLocationFromClass;
 
-public class StoryRunner2Test extends JUnitStories{
+public class StoryRunner2 extends JUnitStories{
     
     @Override
 	public Configuration configuration() {
