@@ -3,12 +3,10 @@ package com.amazon.example.browsersetup;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -23,10 +21,8 @@ public BaseTest() throws IOException {
 public WebDriver  intialization(){
     String browser = props.getProperty("browser");
     if (browser.equals("chrome")) {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments(Arrays.asList("--headless", "--no-sandbox"));
-        options.setBinary("/usr/bin/google-chrome");
-        ChromeDriver driver = new ChromeDriver(options);
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
     } else if (browser.equals("firefox")) {
         WebDriverManager.firefoxdriver().setup();
         driver = new FirefoxDriver();
