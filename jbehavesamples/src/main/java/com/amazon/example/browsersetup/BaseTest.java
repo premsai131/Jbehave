@@ -21,7 +21,7 @@ public BaseTest() throws IOException {
 public WebDriver  intialization(){
     String browser = props.getProperty("browser");
     if (browser.equals("chrome")) {
-        WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().browserVersion("107.0.5304.110").setup();
         driver = new ChromeDriver();
     } else if (browser.equals("firefox")) {
         WebDriverManager.firefoxdriver().setup();
