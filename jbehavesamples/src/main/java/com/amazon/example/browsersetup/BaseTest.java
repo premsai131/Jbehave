@@ -23,7 +23,7 @@ public WebDriver  intialization(){
     if (browser.equals("chrome")) {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-    } else if (browser=="firefox") {
+    } else if (browser.equals("firefox")) {
         WebDriverManager.firefoxdriver().setup();
         driver = new FirefoxDriver();
     } else {

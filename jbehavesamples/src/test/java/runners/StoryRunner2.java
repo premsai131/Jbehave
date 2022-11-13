@@ -25,7 +25,7 @@ import static java.util.Arrays.asList;
 import static org.jbehave.core.io.CodeLocations.codeLocationFromClass;
 
 public class StoryRunner2 extends JUnitStories{
-    
+
     @Override
 	public Configuration configuration() {
 		Class<? extends Embeddable> embeddableClass = this.getClass();
@@ -41,7 +41,7 @@ public class StoryRunner2 extends JUnitStories{
         }
     }
     @Override
-    protected List<String> storyPaths() {
+    public List<String> storyPaths() {
         return new StoryFinder().findPaths(
             codeLocationFromClass(this.getClass()).getFile(), asList("**/"
                     + System.getProperty("storyFilter", "*") + ".story"),
