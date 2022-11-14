@@ -3,6 +3,7 @@ package com.amazon.example.browsersetup;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.io.FileInputStream;
@@ -21,8 +22,11 @@ public BaseTest() throws IOException {
 public WebDriver  intialization(){
     String browser = props.getProperty("browser");
     if (browser.equals("chrome")) {
-        WebDriverManager.chromedriver().driverVersion("107.0.5304.62").setup();
-        driver = new ChromeDriver();
+//        System.setProperty()
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions ChromeOptions = new ChromeOptions();
+        ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
+        driver = new ChromeDriver(ChromeOptions);
     } else if (browser.equals("firefox")) {
         WebDriverManager.firefoxdriver().setup();
         driver = new FirefoxDriver();
