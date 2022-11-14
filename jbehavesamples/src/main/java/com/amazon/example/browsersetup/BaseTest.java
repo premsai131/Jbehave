@@ -3,7 +3,6 @@ package com.amazon.example.browsersetup;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.io.FileInputStream;
@@ -22,14 +21,8 @@ public BaseTest() throws IOException {
 public WebDriver  intialization(){
     String browser = props.getProperty("browser");
     if (browser.equals("chrome")) {
-        System.setProperty("webdriver.chrome.driver",
-                "/usr/local/bin/chromedriver");
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--allow-running-insecure-content");
-        chromeOptions.addArguments("--window-size=1920x1080");
-        chromeOptions.addArguments("--disable-gpu");
-        chromeOptions.setHeadless(true);
-        ChromeDriver driver = new ChromeDriver(chromeOptions);
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
     } else if (browser.equals("firefox")) {
         WebDriverManager.firefoxdriver().setup();
         driver = new FirefoxDriver();
