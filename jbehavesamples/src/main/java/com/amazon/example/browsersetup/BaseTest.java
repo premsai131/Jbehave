@@ -23,7 +23,7 @@ public WebDriver  intialization(){
     String browser = props.getProperty("browser");
     if (browser.equals("chrome")) {
         System.setProperty("webdriver.chrome.driver",
-                "/usr/local/bin/chromedriver.exe");
+                "/usr/local/bin/chromedriver");
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--allow-running-insecure-content");
         chromeOptions.addArguments("--window-size=1920x1080");
