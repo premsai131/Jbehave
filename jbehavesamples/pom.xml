@@ -17,6 +17,7 @@
     <stories>**/StroyRunner3.java</stories>
     <ignore.failures>true</ignore.failures>
     <meta.filter></meta.filter>
+    <jbehave.core.version>3.7</jbehave.core.version>
     <threads>1</threads>
     <skip>false</skip>
   </properties>
@@ -180,17 +181,39 @@
           <groupId>org.jbehave</groupId>
           <artifactId>jbehave-maven-plugin</artifactId>
           <version>${jbehave.core.version}</version>
+          <executions>
+            <execution>
+              <id>unpack-view-resources</id>
+              <phase>process-resources</phase>
+              <goals>
+                <goal>unpack-view-resources</goal>
+              </goals>
+            </execution>
+            <execution>
+              <id>embeddable-stories</id>
+              <phase>integration-test</phase>
+              <configuration>
+                <includes>
+                  <include>${stories}</include>
+                </includes>
+                <excludes />
+              </configuration>
+              <goals>
+                <goal>run-stories-with-annotated-embedder</goal>
+              </goals>
+            </execution>
+          </executions>
         </plugin>
-        <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.0.0-M5</version>
-          <configuration>
-            <includes>
-              <include></include>
-            </includes>
-          </configuration>
-        </plugin>
+<!--        <plugin>-->
+<!--        <groupId>org.apache.maven.plugins</groupId>-->
+<!--        <artifactId>maven-surefire-plugin</artifactId>-->
+<!--        <version>3.0.0-M5</version>-->
+<!--          <configuration>-->
+<!--            <includes>-->
+<!--              <include></include>-->
+<!--            </includes>-->
+<!--          </configuration>-->
+<!--        </plugin>-->
       </plugins>
     </pluginManagement>
 
