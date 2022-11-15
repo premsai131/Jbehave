@@ -101,10 +101,14 @@
         <directory>${basedir}/src/main/java</directory>
         <filtering>false</filtering>
       </resource>
-      <resource>
-        <directory>${basedir}/src/main/test</directory>
-        <filtering>false</filtering>
-      </resource>
+<!--      <resource>-->
+<!--        <directory>${basedir}/src/main/java</directory>-->
+<!--        <filtering>false</filtering>-->
+<!--      </resource>-->
+<!--      <resource>-->
+<!--        <directory>${basedir}/src/main/test</directory>-->
+<!--        <filtering>false</filtering>-->
+<!--      </resource>-->
     </resources>
     <pluginManagement>
       <plugins>
