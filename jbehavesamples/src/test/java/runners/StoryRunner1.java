@@ -19,7 +19,6 @@ import org.junit.Test;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
-
 //@RunWith(SpringJUnit4ClassRunner.class)
 public class StoryRunner1 extends ConfigurableEmbedder{
     public Embedder embedder;
@@ -28,20 +27,20 @@ public class StoryRunner1 extends ConfigurableEmbedder{
      "LoginPage.story",
            "LoginWithoutCreds.story"
     };
-    private static List<String> storyPaths = Arrays.asList("stories/LoginPage.story");
+    private static List<String> storyPaths = Arrays.asList("com/amazon/example/stories/LoginPage.story");
    @Test
     public void run() {
        embedder = configuredEmbedder();
        configuredEmbedder()
                .embedderControls()
-               .useThreads(1);
+               .useThreads(3);
        embedder.configuration();
        String storypath1 = "resources/homepage.story";
         embedder.runStoriesAsPaths(storyPaths);
    }
     public Configuration configuration(){
         System.setProperty("allure.results.directory", "build/allure-results");
-        return (new MostUsefulConfiguration().useStoryReporterBuilder(new StoryReporterBuilder().withFormats(Format.CONSOLE, Format.TXT, Format.HTML, Format.XML, Format.STATS).withReporters(new AllureJbehave())));
+        return (new MostUsefulConfiguration().useStoryReporterBuilder(new StoryReporterBuilder().withFormats(Format.HTML)));
     }
     @Override
     public InjectableStepsFactory stepsFactory() {
