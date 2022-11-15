@@ -6,17 +6,14 @@ import com.amazon.example.stepDefinitions.LoginPageTest;
 import com.amazon.example.stepDefinitions.LoginWithOutCreds;
 import io.qameta.allure.jbehave.AllureJbehave;
 import org.jbehave.core.ConfigurableEmbedder;
-import org.jbehave.core.annotations.UsingEmbedder;
 import org.jbehave.core.configuration.Configuration;
 import org.jbehave.core.configuration.MostUsefulConfiguration;
 import org.jbehave.core.embedder.Embedder;
-import org.jbehave.core.junit.AnnotatedEmbedderRunner;
 import org.jbehave.core.reporters.Format;
 import org.jbehave.core.reporters.StoryReporterBuilder;
 import org.jbehave.core.steps.InjectableStepsFactory;
 import org.jbehave.core.steps.InstanceStepsFactory;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 
 
 import java.io.IOException;
@@ -31,7 +28,7 @@ public class StoryRunner1 extends ConfigurableEmbedder{
      "LoginPage.story",
            "LoginWithoutCreds.story"
     };
-    private static List<String> storyPaths = Arrays.asList("com/amazon/example/stories/LoginPage.story");
+    private static List<String> storyPaths = Arrays.asList("stories/LoginPage.story");
    @Test
     public void run() {
        embedder = configuredEmbedder();

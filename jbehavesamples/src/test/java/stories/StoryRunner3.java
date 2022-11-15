@@ -1,4 +1,4 @@
-package com.amazon.example.stories;
+package stories;
 
 import org.jbehave.core.configuration.Configuration;
 import org.jbehave.core.configuration.MostUsefulConfiguration;
