@@ -235,7 +235,7 @@
               <configuration>
                 <skip>false</skip>
                 <includes>
-                  <include>/com/amazon/example/stories/StoryRunner3.java</include>
+                  <include>runners/StoryRunner3.java</include>
                 </includes>
 
                 <!-- <sources> <source>**/test/example/SuiteTest.java</source> </sources> -->

@@ -1,4 +1,4 @@
-package stories;
+package runners;
 
 import org.jbehave.core.configuration.Configuration;
 import org.jbehave.core.configuration.MostUsefulConfiguration;
