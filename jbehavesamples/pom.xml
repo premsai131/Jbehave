@@ -118,7 +118,7 @@
               <implicitwait>${implicitWait}</implicitwait>
             </systemPropertyVariables>
             <includes>
-              <include>${testFile}</include>
+              <include>src/test/java/runners/StoryRunner1.java</include>
             </includes>
           </configuration>
         </plugin>
