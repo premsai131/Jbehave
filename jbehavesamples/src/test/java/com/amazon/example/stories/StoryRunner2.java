@@ -17,9 +17,7 @@ import org.jbehave.core.steps.InstanceStepsFactory;
 import com.amazon.example.hooks.ApplicationHooks;
 
 import io.qameta.allure.jbehave.AllureJbehave;
-import org.junit.platform.runner.JUnitPlatform;
-import org.junit.platform.suite.api.IncludeTags;
-import org.junit.runner.RunWith;
+
 
 import org.jbehave.core.Embeddable;
 import org.jbehave.core.io.StoryFinder;
@@ -28,8 +26,7 @@ import org.junit.runner.RunWith;
 import static java.util.Arrays.asList;
 import static org.jbehave.core.io.CodeLocations.codeLocationFromClass;
 
-@RunWith(JUnitPlatform.class)
-@IncludeTags("SmokeTest")
+
 public class StoryRunner2 extends JUnitStories{
 
     @Override
