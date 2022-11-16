@@ -1,7 +1,6 @@
 Narrative: Verify login functionality of amazon website
 
-Meta:
-@author Mauro
+
 Scenario: Verify login to amazon website with invalid usernames
 Given user is on amazon login page
 When user enters the username as <username>
@@ -13,8 +12,7 @@ Examples:
 |12jor#$@|
 |mike~0224%#@gmail.com|
 
-Meta:
-@theme filtering
+
 Scenario: Verify login to amazon with invalid passwords
 
 Given user is on amazon login page
@@ -29,8 +27,7 @@ Examples:
 |asdkhas83972324|
 
 
-Meta:
-@skip
+@Tag(“SmokeTest”)
 Scenario: Verify login to amazon with valid credentials
 
 Given user is on amazon login page

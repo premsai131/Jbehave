@@ -1,5 +1,6 @@
 Narrative: Verify restoring the session using cookies
 
+
 Scenario: Verify login to the Website using session store
 
 Given user is on Amazon home page

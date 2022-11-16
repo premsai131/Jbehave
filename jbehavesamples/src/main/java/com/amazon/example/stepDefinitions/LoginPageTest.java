@@ -96,8 +96,8 @@ public class LoginPageTest extends BaseTest {
 
     @Then("user enters password and clicks on signin button")
     public void enterPasswordAndSignIn() {
-        System.out.println(props.getProperty("password") + "password");
-        loginPage.enterpassword(props.getProperty("password"));
+//        loginPage.enterpassword(props.getProperty("password"));
+        loginPage.enterpassword(System.getProperty("password"));
         loginPage.clickOnSignInButton();
     }
 

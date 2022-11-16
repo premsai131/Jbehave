@@ -23,6 +23,7 @@ public WebDriver  intialization(){
     String browser = props.getProperty("browser");
     if (browser.equals("chrome")) {
         WebDriverManager.chromedriver().setup();
+//        driver = new ChromeDriver();
         ChromeOptions ChromeOptions = new ChromeOptions();
         ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
         driver = new ChromeDriver(ChromeOptions);
@@ -39,7 +40,9 @@ public void visitWebsite() throws InterruptedException {
     driver.get(url);
     driver.manage().window().maximize();
     driver.manage().timeouts().pageLoadTimeout(20,TimeUnit.SECONDS);
-    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    int wait = Integer.parseInt(System.getProperty("implicitwait"));
+    driver.manage().timeouts().implicitlyWait(wait, TimeUnit.SECONDS);
+//    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 }
 public void close(){
     driver.close();
