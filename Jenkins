@@ -22,11 +22,9 @@ pipeline {
             }
 
             post {
-                // If Maven was able to run the tests, even if some of the test
-                // failed, record the test results and archive the jar file.
-                success {
-                    junit '**/target/jbehave/view/TEST-*.html'
-                    archiveArtifacts 'target/*.jar'
+                allways
+                 {
+                    emialtext body: 'summary', subject: 'Pipeline Status', to: 'premsai131infotech@gmail.com'
                 }
             }
         }
