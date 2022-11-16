@@ -22,9 +22,7 @@ public BaseTest() throws IOException {
 public WebDriver  intialization(){
     String browser = props.getProperty("browser");
     if (browser.equals("chrome")) {
-//        System.setProperty()
         WebDriverManager.chromedriver().setup();
-//        driver = new ChromeDriver();
         ChromeOptions ChromeOptions = new ChromeOptions();
         ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
         driver = new ChromeDriver(ChromeOptions);
