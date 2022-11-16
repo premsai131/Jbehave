@@ -1,4 +1,4 @@
-package com.amazon.example.stories;
+package runners;
 
 import java.io.IOException;
 import java.util.List;
