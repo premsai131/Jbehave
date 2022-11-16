@@ -28,7 +28,7 @@ public class Emailer {
     public void emailWithAttachment() throws EmailException {
         // Create the attachment
         EmailAttachment attachment = new EmailAttachment();
-        attachment.setPath("/home/premst/Desktop/jbehavesample/jbehavesamples/target/jbehave/com.amazon.example.stories.LoginPage.html");
+        attachment.setPath("/var/lib/jenkins/workspace/pipelineJbehave/Workspace/jbehavesamples/target/jbehave/com.amazon.example.stories.LoginPage.html");
         attachment.setDisposition(EmailAttachment.ATTACHMENT);
         attachment.setDescription("html report");
         attachment.setName("selenium report");
@@ -38,6 +38,7 @@ public class Emailer {
         email.setSmtpPort(465);
         email.setSSLOnConnect(true);
         email.setAuthenticator(new DefaultAuthenticator(props.getProperty("username"), props.getProperty("apppassword")));
+        email.setAuthenticator(new DefaultAuthenticator(System.getProperty("gmailusername"), props.getProperty("gmailappapssword")));
         email.addTo("ptippaluri@softility.com", "premsai");
         email.setFrom(props.getProperty("username"), "premsai");
         email.setSubject("jbehave sample test");

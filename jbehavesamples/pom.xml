@@ -97,8 +97,9 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <version>3.0.0-M5</version>
           <configuration><systemPropertyVariables>
-            <password>${amazonPassword}</password>
-            <implicitwait>${implicitWait}</implicitwait>
+            <amazonpassword>${amazonPassword}</amazonpassword>
+            <gmailapppassword>${gmailAppPassword}</gmailapppassword>
+            <gmailusername>${gmailUsername}</gmailusername>
           </systemPropertyVariables>
             <includes>
 <!--              <include>runners.StoryRunner2</include>-->
