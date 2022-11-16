@@ -28,7 +28,7 @@ public class LoginWithOutCreds extends BaseTest {
         driver = baseTest.intialization();
         baseTest.visitWebsite();
         homePage = new HomePage(driver);
-        loginPage = new LoginPage(driver);
+//        loginPage = new LoginPage(driver);
         sessionStorage = new SessionStorage(driver);
     }
     @Given ("user is on Amazon home page")

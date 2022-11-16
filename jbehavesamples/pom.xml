@@ -104,9 +104,13 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.0.0-M5</version>
           <configuration>
-            <includes>
-              <include>runners.StoryRunner1</include>
-            </includes>
+            <suiteXmlFiles>
+              <!--suppress UnresolvedMavenProperty -->
+              <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+            </suiteXmlFiles>
+<!--            <includes>-->
+<!--              <include>runners.StoryRunner1</include>-->
+<!--            </includes>-->
           </configuration>
         </plugin>
       </plugins>
