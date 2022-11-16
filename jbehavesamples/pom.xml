@@ -71,13 +71,13 @@
       <artifactId>javax.mail</artifactId>
       <version>1.6.2</version>
     </dependency>
-<!--    &lt;!&ndash; https://mvnrepository.com/artifact/org.junit.platform/junit-platform-runner &ndash;&gt;-->
-<!--    <dependency>-->
-<!--      <groupId>org.junit.platform</groupId>-->
-<!--      <artifactId>junit-platform-runner</artifactId>-->
-<!--      <version>1.7.2</version>-->
-<!--      <scope>test</scope>-->
-<!--    </dependency>-->
+    <!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-runner -->
+    <dependency>
+      <groupId>org.junit.platform</groupId>
+      <artifactId>junit-platform-runner</artifactId>
+      <version>1.7.2</version>
+      <scope>test</scope>
+    </dependency>
 
 
     <!-- https://mvnrepository.com/artifact/org.jbpm/jbpm-workitems-email -->
@@ -114,11 +114,11 @@
         <version>3.0.0-M5</version>
           <configuration>
             <systemPropertyVariables>
+              <userName>${amazonUsername}</userName>
               <password>${amazonPassword}</password>
-              <implicitwait>${implicitWait}</implicitwait>
             </systemPropertyVariables>
             <includes>
-              <include>${suiteXmlFile}</include>
+              <include>${testFile}</include>
             </includes>
           </configuration>
         </plugin>
