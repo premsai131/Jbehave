@@ -13,7 +13,7 @@ pipeline {
                 git branch: 'master', url: 'https://github.com/premsai131/Jbehave.git'
 
                 // Run Maven on a Unix agent.
-                sh "mvn clean test"
+                sh "mvn clean --file *.pom"
 
                 // To run Maven on a Windows agent, use
                 // bat "mvn -Dmaven.test.failure.ignore=true clean package"
