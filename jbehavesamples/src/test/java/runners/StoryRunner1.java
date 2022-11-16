@@ -25,8 +25,7 @@ public class StoryRunner1 extends ConfigurableEmbedder{
     public Embedder embedder;
    static String[] stories={
      "homepage.story",
-     "LoginPage.story",
-           "LoginWithoutCreds.story"
+     "LoginPage.story", "LoginWithoutCreds.story"
     };
 
     private static List<String> storyPaths = Arrays.asList("com/amazon/example/stories/LoginPage.story");
