@@ -103,7 +103,8 @@ public class LoginPageTest extends BaseTest {
     @Then("user should see user's name in accounts&lists section")
     public void verfifySuccessFulSignIn() {
         sessionStorage.storeCookies();
-        Assert.assertEquals("username not matching", homePage.getSigninUsername(), "premsai");
+        Assert.assertEquals("username not matching", homePage.getSigninUsername(), "pemsai");
+        System.out.println("User logged in successfully");
     }
 
 }
