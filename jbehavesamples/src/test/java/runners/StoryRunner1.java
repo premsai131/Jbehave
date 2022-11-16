@@ -28,6 +28,7 @@ public class StoryRunner1 extends ConfigurableEmbedder{
      "LoginPage.story",
            "LoginWithoutCreds.story"
     };
+
     private static List<String> storyPaths = Arrays.asList("com/amazon/example/stories/LoginWithoutCreds.story");
    @Test
     public void run() {
