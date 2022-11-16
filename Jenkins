@@ -13,7 +13,7 @@ pipeline {
                 git 'https://github.com/jglick/simple-maven-project-with-tests.git'
 
                 // Run Maven on a Unix agent.
-                sh "mvn clean test"
+                sh "mvn clean test -Dsuite=pom.xml"
 
                 // To run Maven on a Windows agent, use
                 // bat "mvn -Dmaven.test.failure.ignore=true clean package"
