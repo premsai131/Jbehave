@@ -12,7 +12,7 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
-public WebDriver driver;
+public static WebDriver driver;
 public Properties props;
 public BaseTest() throws IOException {
     props = new Properties();
@@ -44,10 +44,10 @@ public void visitWebsite() throws InterruptedException {
 //    driver.manage().timeouts().implicitlyWait(wait, TimeUnit.SECONDS);
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 }
-public void close(){
+public static void close(){
     driver.close();
 }
-public void quit(){
+public static void quit(){
     driver.quit();
 }
 }

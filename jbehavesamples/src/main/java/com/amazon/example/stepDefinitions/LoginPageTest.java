@@ -15,7 +15,6 @@ import org.openqa.selenium.WebDriver;
 import java.io.IOException;
 
 public class LoginPageTest extends BaseTest {
-    private WebDriver driver;
     private BaseTest baseTest;
     private LoginPage loginPage;
     private HomePage homePage;
@@ -27,7 +26,7 @@ public class LoginPageTest extends BaseTest {
         super();
     }
 
-    @BeforeStory(order = 0)
+    @BeforeStory
     public void setupAndVisitApplication() throws IOException, InterruptedException {
         baseTest = new BaseTest();
         driver = baseTest.intialization();

@@ -46,7 +46,7 @@ public class StoryRunner1 extends ConfigurableEmbedder{
     @Override
     public InjectableStepsFactory stepsFactory() {
         try {
-            return new InstanceStepsFactory(configuration(), new ApplicationHooks(), new LoginPageTest(), new LoginWithOutCreds());
+            return new InstanceStepsFactory(configuration(), new ApplicationHooks(), new LoginPageTest());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

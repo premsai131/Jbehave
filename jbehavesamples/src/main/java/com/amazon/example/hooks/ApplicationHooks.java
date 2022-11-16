@@ -30,9 +30,9 @@ public class ApplicationHooks extends BaseTest {
     @AfterStories(order = 1)
     public void quitBrowserSession() throws IOException {
         System.out.println("after stories 0 ");
-        baseTest = new BaseTest();
-        baseTest.close();
-        baseTest.quit();
+//        baseTest = new BaseTest();
+        BaseTest.close();
+        BaseTest.quit();
     }
     @AfterStories(order = 0)
     public void sendreport() throws EmailException, IOException {
