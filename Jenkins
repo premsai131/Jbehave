@@ -9,11 +9,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                // Get some code from a GitHub repository
                 git branch: 'master', url: 'https://github.com/premsai131/Jbehave.git'
-
+                dir('jbehavesamples')
                 // Run Maven on a Unix agent.
-                sh "mvn clean --file *.pom"
+                {
+                sh "pwd"
+                sh "mvn clean test"
+                }
 
                 // To run Maven on a Windows agent, use
                 // bat "mvn -Dmaven.test.failure.ignore=true clean package"
