@@ -22,7 +22,7 @@ pipeline {
             }
 
             post {
-                allways
+                always
                  {
                     emialtext body: 'summary', subject: 'Pipeline Status', to: 'premsai131infotech@gmail.com'
                 }
