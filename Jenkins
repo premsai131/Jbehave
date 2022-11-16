@@ -8,14 +8,13 @@ pipeline {
 
     stages {
         stage('Build') {
-            steps
-            {
+            steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/premsai131/Jbehave.git'
+                git 'https://github.com/jglick/simple-maven-project-with-tests.git'
 
                 // Run Maven on a Unix agent.
                 sh "mvn -Dmaven.test.failure.ignore=true clean package"
-                sh "mvn clean test"
+
                 // To run Maven on a Windows agent, use
                 // bat "mvn -Dmaven.test.failure.ignore=true clean package"
             }
@@ -23,10 +22,9 @@ pipeline {
             post {
                 // If Maven was able to run the tests, even if some of the test
                 // failed, record the test results and archive the jar file.
-                always
-                {
-                    //junit '**/target/surefire-reports/TEST-*.xml'
-                    //archiveArtifacts 'target/*.jar'
+                success {
+                    junit '**/target/surefire-reports/TEST-*.xml'
+                    archiveArtifacts 'target/*.jar'
                 }
             }
         }
