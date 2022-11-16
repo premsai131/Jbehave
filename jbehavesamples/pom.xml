@@ -113,12 +113,12 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.0.0-M5</version>
           <configuration>
-<!--            <systemPropertyVariables>-->
-<!--              <password>${amazonPassword}</password>-->
-<!--              <implicitwait>${implicitWait}</implicitwait>-->
-<!--            </systemPropertyVariables>-->
+            <systemPropertyVariables>
+              <password>${amazonPassword}</password>
+              <implicitwait>${implicitWait}</implicitwait>
+            </systemPropertyVariables>
             <includes>
-              <include>src/test/java/runners/StoryRunner1.java</include>
+              <include>${suiteXmlFile}</include>
             </includes>
           </configuration>
         </plugin>
