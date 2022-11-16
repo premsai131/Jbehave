@@ -37,8 +37,8 @@ public class Emailer {
         email.setHostName("smtp.gmail.com");
         email.setSmtpPort(465);
         email.setSSLOnConnect(true);
-        email.setAuthenticator(new DefaultAuthenticator(props.getProperty("username"), props.getProperty("apppassword")));
-        email.setAuthenticator(new DefaultAuthenticator(System.getProperty("gmailusername"), props.getProperty("gmailappapssword")));
+//        email.setAuthenticator(new DefaultAuthenticator(props.getProperty("username"), props.getProperty("apppassword")));
+        email.setAuthenticator(new DefaultAuthenticator(System.getProperty("gmailusername"), System.getProperty("gmailapppassword")));
         email.addTo("ptippaluri@softility.com", "premsai");
         email.setFrom(props.getProperty("username"), "premsai");
         email.setSubject("jbehave sample test");
