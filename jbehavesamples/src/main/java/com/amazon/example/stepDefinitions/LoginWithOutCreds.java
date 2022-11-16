@@ -44,5 +44,6 @@ public class LoginWithOutCreds extends BaseTest {
     public void VerifySuccessFullLoginAfterSessionRestoring(){
 
         Assert.assertEquals("username not matching","premsai" , homePage.getSigninUsername());
+        System.out.println("Session restored successfully");
     }
 }
