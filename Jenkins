@@ -24,7 +24,7 @@ pipeline {
             post {
                 always
                  {
-                    emailtext body: 'summary', subject: 'Pipeline Status', to: 'premsai131infotech@gmail.com'
+                   // emailtext body: 'summary', subject: 'Pipeline Status', to: 'premsai131infotech@gmail.com'
                 }
             }
         }
