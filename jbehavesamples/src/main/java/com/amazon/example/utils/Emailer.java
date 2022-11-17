@@ -28,7 +28,7 @@ public class Emailer {
     public void emailWithAttachment() throws EmailException {
         // Create the attachment
         EmailAttachment attachment = new EmailAttachment();
-        attachment.setPath("/var/lib/jenkins/workspace/pipelineJbehave/Workspace/jbehavesamples/target/jbehave/com.amazon.example.stories.LoginPage.html");
+        attachment.setPath("/var/lib/jenkins/workspace/pipelineJbehave/jbehavesamples/target/jbehave/com.amazon.example.stories.LoginPage.html");
         attachment.setDisposition(EmailAttachment.ATTACHMENT);
         attachment.setDescription("html report");
         attachment.setName("selenium report");
