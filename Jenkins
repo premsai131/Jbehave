@@ -20,13 +20,6 @@ pipeline {
                 // To run Maven on a Windows agent, use
                 // bat "mvn -Dmaven.test.failure.ignore=true clean package"
             }
-
-            post {
-                always
-                 {
-                   // emailtext body: 'summary', subject: 'Pipeline Status', to: 'premsai131infotech@gmail.com'
-                }
-            }
         }
     }
 }
