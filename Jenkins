@@ -11,7 +11,7 @@ pipeline {
             steps {
                 git branch: 'master', url: 'https://github.com/premsai131/Jbehave.git'
                 dir('jbehavesamples')
-                // Run Maven on a Unix agent.
+
                 {
                 sh "pwd"
                 sh "mvn clean test"

@@ -8,6 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -39,10 +40,10 @@ public void visitWebsite() throws InterruptedException {
     String url = props.getProperty("url");
     driver.get(url);
     driver.manage().window().maximize();
-    driver.manage().timeouts().pageLoadTimeout(20,TimeUnit.SECONDS);
+    driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
 //    int wait = Integer.parseInt(System.getProperty("implicitwait"));
 //    driver.manage().timeouts().implicitlyWait(wait, TimeUnit.SECONDS);
-    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 }
 public static void close(){
     driver.close();
