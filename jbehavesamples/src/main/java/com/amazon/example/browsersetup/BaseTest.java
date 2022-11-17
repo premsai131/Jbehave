@@ -43,7 +43,7 @@ public void visitWebsite() throws InterruptedException {
     driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
 //    int wait = Integer.parseInt(System.getProperty("implicitwait"));
 //    driver.manage().timeouts().implicitlyWait(wait, TimeUnit.SECONDS);
-    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 }
 public static void close(){
     driver.close();
